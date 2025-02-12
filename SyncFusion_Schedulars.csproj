@@ -8,4 +8,10 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.SfScheduler.WPF" Version="28.2.5" />
+    <PackageReference Include="Syncfusion.SfSkinManager.WPF" Version="28.2.5" />
+    <PackageReference Include="Syncfusion.Themes.Windows11Dark.WPF" Version="28.2.5" />
+  </ItemGroup>
+
 </Project>

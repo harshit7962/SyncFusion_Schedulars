@@ -4,9 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SyncFusion_Schedulars"
+        xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+    <StackPanel>
+        <syncfusion:SfScheduler x:Name="Schedule"         
+                AllowedViewTypes="Day,Month,TimelineDay,TimelineMonth,TimelineWeek,TimelineWorkWeek,Week,WorkWeek" />
+    </StackPanel>
 </Window>
