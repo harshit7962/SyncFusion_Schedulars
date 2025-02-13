@@ -11,6 +11,21 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        SfSkinManager.SetTheme(this, new Theme("Windows11Dark"));
+    }
+
+    private void Button_OpenSchedularClick(object sender, RoutedEventArgs e)
+    {
+        Schedular_Window schedularWindow = new();
+
+        schedularWindow.Owner = this;
+        schedularWindow.ShowDialog();
+    }
+
+    private void Button_OpenTimeSelectorClick(object sender, RoutedEventArgs e)
+    {
+        TimeSelector_Window timeWindow = new();
+
+        timeWindow.Owner = this;
+        timeWindow.ShowDialog();
     }
 }
