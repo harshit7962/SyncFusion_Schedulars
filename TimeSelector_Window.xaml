@@ -8,9 +8,18 @@
         mc:Ignorable="d"
         Title="TimeSelector_Window" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        
         <ComboBox x:Name="ThemeCombo"
-          Width="120" Height="30" 
-          Margin="400,50,0,0"
+          Width="240" Height="40" 
+          Grid.Row="0" Grid.Column="1"
           HorizontalAlignment="Center" VerticalAlignment="Center"
           FontSize="13"
           IsEditable="False"
@@ -20,16 +29,25 @@
             <ComboBoxItem>FluentLight</ComboBoxItem>
             <ComboBoxItem>FluentDark</ComboBoxItem>
         </ComboBox>
+   
         <syncfusion:SfTimeSelector
              x:Name="TimeSelector"
-             Grid.Row="1"
+             Grid.Column="0" Grid.RowSpan="2"
              Height="400"
-             Margin="10"
              HorizontalAlignment="Center"
              VerticalAlignment="Center"
              BorderThickness="1"
-             FormatString="h/m/s/t"
              ShowCancelButton="False"
              ShowDoneButton="False" />
+
+        <ComboBox x:Name="FormatCombo"
+          Width="240" Height="40"
+          SelectedIndex="0"
+          Grid.Row="1" Grid.Column="1"
+          SelectionChanged="FormatCombo_SelectionChanged">
+            <ComboBoxItem>Hour, Minute, Second, Time</ComboBoxItem>
+            <ComboBoxItem>Hour, Minute, Second</ComboBoxItem>
+            <ComboBoxItem>Hour, Minute, Time</ComboBoxItem>
+        </ComboBox>
     </Grid>
 </Window>

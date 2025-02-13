@@ -34,5 +34,28 @@ namespace SyncFusion_Schedulars
                 SfSkinManager.SetTheme(this, new Theme(selectedTheme));
             }
         }
+
+        private void FormatCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int selectedIndex = FormatCombo.SelectedIndex;
+
+            if(selectedIndex == 0)
+            {
+                TimeSelector.FormatString = "hh:mm:ss tt";
+            }
+            else if (selectedIndex == 1)
+            {
+                TimeSelector.FormatString = "hh:mm:ss";
+            }
+            else if(selectedIndex == 2)
+            {
+                TimeSelector.FormatString = "hh:mm tt";
+            }
+            else
+            {
+                throw new InvalidOperationException("Incorrect ComboBox selection");
+            }
+
+        }
     }
 }
